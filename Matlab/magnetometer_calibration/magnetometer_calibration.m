@@ -13,7 +13,8 @@
 %******************************************************************************************
 
 % read magnetometer data from Processing Sketch directory
-file = fopen('../../Processing/Magnetometer_calibration/magnetom.float');
+% file = fopen('../../Processing/Magnetometer_calibration/magnetom.float');
+file = fopen('/Users/dyne/src/razor-9dof-ahrs/Processing/Magnetometer_calibration/magnetom.float');
 [M, c] = fread(file, [3, inf], 'float', 'b');
 
 x = M(1,:)';

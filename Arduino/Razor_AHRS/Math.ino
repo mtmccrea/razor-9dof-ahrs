@@ -1,4 +1,4 @@
-/* This file is part of the Razor AHRS Firmware */
+ /* This file is part of the Razor AHRS Firmware */
 
 // Computes the dot product of two vectors
 float Vector_Dot_Product(const float v1[3], const float v2[3])

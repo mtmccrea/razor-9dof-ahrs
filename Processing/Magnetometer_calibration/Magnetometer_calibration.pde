@@ -24,11 +24,16 @@
   We're using EJML for matrix math, because it's really fast:
   http://code.google.com/p/java-matrix-benchmark/
   Also, it's released under LGPL, which fits well with our GPL.
-  Get the library from: http://code.google.com/p/efficient-java-matrix-library/ (you only need
-  the .jar file), find your Processing "libraries" folder (normally this is Processing/libraries
-  in your user documents folder). Create a folder "EJML" inside "libraries",
-  create a folder "library" inside "EJML" and put the .jar inside. Rename to EJML.jar. So you
-  should have "libraries/EJML/library/EJML.jar". Restart Processing and you're good.
+  1. Get the library from: http://code.google.com/p/efficient-java-matrix-library/ (you only need
+  the .jar file), 
+  2. Find your Processing "libraries" folder (normally this is Processing/libraries
+  in your user documents folder). 
+  3. Create a folder "EJML" inside "libraries",
+  4, create a folder "library" inside "EJML" and 
+  4. put the .jar inside. 
+  5. Rename to EJML.jar. 
+  6. So you should have "libraries/EJML/library/EJML.jar". 
+  7. Restart Processing and you're good.
   More info on installing libraries in Processing: http://wiki.processing.org/w/How_to_Install_a_Contributed_Library
   Tested to be working with EJML 0.17 and 0.23.
 */
@@ -40,7 +45,7 @@ import org.ejml.ops.*;
 // 1. Have a look at the Processing console output of this sketch.
 // 2. Look for the serial port list and find the port you need (it's the same as in Arduino).
 // 3. Set your port number here:
-final static int SERIAL_PORT_NUM = 0;
+final static int SERIAL_PORT_NUM = 7;
 // 4. Try again.
 
 
@@ -90,11 +95,12 @@ void setup() {
   
   // Setup serial port I/O
   println("AVAILABLE SERIAL PORTS:");
-  println(Serial.list());
+  //println(Serial.list());
+  printArray(Serial.list());
   String portName = Serial.list()[SERIAL_PORT_NUM];
   println();
   println("HAVE A LOOK AT THE LIST ABOVE AND SET THE RIGHT SERIAL PORT NUMBER IN THE CODE!");
-  println("  -> Using port " + SERIAL_PORT_NUM + ": " + portName);
+  println( "  -> Using port " + SERIAL_PORT_NUM + ": " + portName);
   serial = new Serial(this, portName, SERIAL_PORT_BAUD_RATE);
 }
 

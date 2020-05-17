@@ -90,7 +90,7 @@ bool initIMU(void)
 		// Otherwise add raw gyro readings to the DMP
 		dmpFeatureMask |= DMP_FEATURE_SEND_RAW_GYRO;
 	}
-	// Add accel and quaternion's to the DMP
+	// Add accel and  ernion's to the DMP
 	dmpFeatureMask |= DMP_FEATURE_SEND_RAW_ACCEL;
 	dmpFeatureMask |= DMP_FEATURE_6X_LP_QUAT;
 	// Because of known issue without DMP_FEATURE_TAP...
